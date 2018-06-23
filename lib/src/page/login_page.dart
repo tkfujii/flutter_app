@@ -33,10 +33,10 @@ class _LoginPageState extends State<LoginPage> {
       padding: new EdgeInsets.all(20.0),
       child: new Column(
         children: <Widget>[
-          new Padding(
-              child: new Image.network(
-                  "https://flutter.co/site/img/flutter-logo.png"),
-              padding: const EdgeInsets.all(20.0)),
+//          new Padding(
+//              child: new Image.network(
+//                  "https://flutter.co/site/img/flutter-logo.png"),
+//              padding: const EdgeInsets.all(20.0)),
           new Container(
             decoration: new BoxDecoration(
               color: const Color(0xffffffff),

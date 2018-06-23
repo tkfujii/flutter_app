@@ -60,9 +60,10 @@ class _SplashScreenState extends State<SplashScreen>
         child: new Opacity(
             opacity: animation.value,
             child: new Container(
-              padding: const EdgeInsets.all(20.0),
-              child: new Image.network(
-                  "https://flutter.co/site/img/flutter-logo.png"),
+//              padding: const EdgeInsets.all(20.0),
+//              child: new Image.network(
+//                  "https://flutter.co/site/img/flutter-logo.png"),
+              child: new Container(),
             )));
   }
 }

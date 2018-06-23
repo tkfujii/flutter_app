@@ -9,6 +9,9 @@ import 'package:flutter_app/src/page/grid_page.dart';
 import 'package:flutter_app/src/page/photo_page.dart';
 import 'package:flutter_app/src/page/movie_page.dart';
 
+import 'package:flutter_app/src/page/app_info_1_page.dart';
+import 'package:flutter_app/src/page/app_info_2_page.dart';
+
 ///
 /// アプリケーションクラス、Widgetのコントローラを内包します。
 ///
@@ -38,8 +41,6 @@ class MyApp extends StatelessWidget {
 class PageController extends StatefulWidget {
   PageController({Key key}) : super(key: key);
 
-  final String title;
-
   @override
   _PageControllerState createState() => new _PageControllerState();
 }
@@ -49,9 +50,9 @@ class _PageControllerState extends State<PageController> {
 
   @override
   Widget build(BuildContext context) {
-    PreferredSizeWidget appBar = null;
-    Widget content = null;
-    Widget bottomBar = null;
+    PreferredSizeWidget appBar;
+    Widget content;
+    Widget bottomBar;
 
     switch (pageItem) {
       case PageItem.splash:
@@ -77,6 +78,24 @@ class _PageControllerState extends State<PageController> {
                 pageItem = PageItem.grid;
               });
             },
+          );
+          bottomBar = new ButtonBar(
+            children: <Widget>[
+              new MaterialButton(
+                onPressed: () {
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (context) => AppInfo1Page()));
+                },
+                child: const Text("アプリ情報１"),
+              ),
+              new MaterialButton(
+                onPressed: () {
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (context) => AppInfo2Page()));
+                },
+                child: const Text("アプリ情報２"),
+              )
+            ],
           );
           break;
         }

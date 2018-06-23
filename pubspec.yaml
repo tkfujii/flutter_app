@@ -16,6 +16,9 @@ dependencies:
   # https://github.com/flutter/plugins/tree/master/packages/video_player
   video_player: "^0.5.1"
 
+  # https://pub.dartlang.org/packages/logger
+  logger: "^0.1.0"
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
